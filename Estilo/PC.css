@@ -1,0 +1,379 @@
+body{
+    background-image: url(../Imagens/bg4.png);
+    background-color: rgba(0, 0, 0, 0.92); /* Exemplo: 50% de opacidade (0.5) */
+    background-blend-mode: overlay; /* Isso pode ser usado para ajustar o modo de mesclagem, experimente conforme necessário */
+    background-repeat: no-repeat;
+    background-size: 100%;
+    overflow: hidden;
+}
+    ::selection{
+        color:rgb(255, 255, 255);
+        background: rgba(21, 107, 227, 0.237);
+    }
+
+
+.leonardo{
+        border-radius: 100%;
+        animation: leonardo 2s infinite alternate;
+        width: 10%;
+        height: 10%;
+        display: block;
+        margin: 0 auto;
+        margin-top: 26px;
+        margin-bottom: 9px;
+        -webkit-user-drag: none;
+    }
+
+    @keyframes leonardo {
+        0%{
+            box-shadow:0px 0px 19px 9px white;
+        }
+        100%{
+            box-shadow: 0px 0px 13px 2px white;
+        }
+    }
+
+    .texto{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 10px;
+    font-size: 100px;
+    pointer-events: none;
+   }
+
+    .texto h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(0, 125, 241);
+    margin: 0%;
+    font-weight: 600;
+    font-size: 40px;
+    margin-bottom:1px;
+    
+   }
+   .verificado{
+    width: 20px; 
+    margin: 0.5% 0px 0px 5px;
+   }
+
+   .sub{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    margin: 0%;
+    font-size: 14px; 
+    text-wrap: nowrap;
+  }
+
+  .seção{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 35px;
+  }
+
+
+.itens {
+    display: flex;
+    padding: 10px;
+    flex-direction: row;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: poppins, sans-serif;
+    margin-left: 9px;
+    background: rgb(255, 255, 255);
+    margin: 10px 8px;
+    border-radius: 16px;
+    width: 60%;
+}
+
+.itens p{
+    padding: 3px;
+}
+
+.img{
+    width: 30px; 
+    height: 30px; 
+    margin-left: 5px;
+}
+
+@media only screen and (min-width:850px){
+    body{
+        background-image: url(../Imagens/bg4.png);
+        background-color: rgba(0, 0, 0, 0.92); /* Exemplo: 50% de opacidade (0.5) */
+        background-blend-mode: overlay; /* Isso pode ser usado para ajustar o modo de mesclagem, experimente conforme necessário */
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    .leonardo{
+            border-radius: 100%;
+            animation: leonardo 2s infinite alternate;
+            pointer-events: none;
+            width: 7%;
+            height: 7%;
+            display: block;
+            margin: 0 auto;
+            margin-top: 26px;
+            margin-bottom: 9px;
+        }
+    
+        @keyframes leonardo {
+            0%{
+                box-shadow:0px 0px 15px 6px white;
+            }
+            100%{
+                box-shadow: 0px 0px 13px 2px white;
+            }
+        }
+    
+    
+        .texto h1 {
+        margin: 0%;
+        font-weight: 800;
+        font-size: 20px;
+        margin-bottom:1px;
+        
+       }
+       .verificado{
+        width: 10px; 
+        margin: 0.5% 0px 0px 5px;
+       }
+    
+       .sub{
+        margin: 0%;
+        font-size: 2vw;
+      }
+    
+      .seção{
+        margin-top: 1cm;
+      }
+    
+    
+    .itens {
+        padding: 6px;
+        font-size: 2vw;
+        font-weight: 700;
+        margin-left: 9px;
+        margin: 10px 8px;
+        border-radius: 16px;
+        width: 80%;
+    }
+    
+    .itens p{
+        padding: 3px;
+    }
+    
+    .img{
+        width: 30px; 
+        height: 30px; 
+        margin-left: 5px;
+    }
+}
+
+@media only screen and (min-width:1650px){
+
+    .leonardo{
+            border-radius: 100%;
+            animation: leonardo 2s infinite alternate;
+            pointer-events: none;
+            width: 10%;
+            height: 10%;
+            display: block;
+            margin: 0 auto;
+            margin-top: 2vw;
+            margin-bottom: 9px;
+        }
+    
+        @keyframes leonardo {
+            0%{
+                box-shadow:0px 0px 15px 6px white;
+            }
+            100%{
+                box-shadow: 0px 0px 13px 2px white;
+            }
+        }
+    
+    
+        .texto h1 {
+        margin: 0%;
+        font-weight: 700;
+        font-size: 2vw;
+        margin-bottom:1px;
+        
+       }
+       .verificado{
+        width: 1.3vw; 
+        margin: 0.2% 0px 0px 5px;
+       }
+    
+       .sub{
+        margin: 0%;
+        font-size: 2vw;
+      }
+    
+      .seção{
+        margin-top: 1cm;
+      }
+    
+    
+    .itens {
+        padding: 6px;
+        font-size: 3vw;
+        font-weight: 700;
+        margin-left: 9px;
+        margin: 0.3cm 0.5cm;
+        border-radius: 16px;
+        width: 80%;
+    }
+    
+    .itens p{
+        padding: 3px;
+    }
+    
+    .img{
+        width: 3vw; 
+        height: 3vw; 
+        margin-left: 5px;
+    }
+}
+
+@media only screen and (min-width:1900px){
+
+    .leonardo{
+            border-radius: 100%;
+            animation: leonardo 2s infinite alternate;
+            pointer-events: none;
+            width: 13%;
+            height: 13%;
+            display: block;
+            margin: 0 auto;
+            margin-top: 2vw;
+            margin-bottom: 1.5vw;
+        }
+    
+        @keyframes leonardo {
+            0%{
+                box-shadow:0px 0px 1vw 0.3vw white;
+            }
+            100%{
+                box-shadow: 0px 0px 2vw 0.7vw white;
+            }
+        }
+    
+    
+        .texto h1 {
+        margin: 0%;
+        font-weight: 700;
+        font-size: 3vw;
+        margin-bottom:1px;
+        
+       }
+       .verificado{
+        width: 1.7vw; 
+        margin: 0.2% 0px 0px 5px;
+       }
+    
+       .sub{
+        margin: 0%;
+        font-size: 2.3vw;
+      }
+    
+      .seção{
+        margin-top: 1cm;
+      }
+    
+    
+    .itens {
+        padding: 6px;
+        font-size: 3vw;
+        font-weight: 700;
+        margin-left: 9px;
+        margin: 0.3cm 0.5cm;
+        border-radius: 6vw;
+        width: 80%;
+    }
+    
+    .itens p{
+        padding: 3px;
+    }
+    
+    .img{
+        width: 3.4vw; 
+        height: 3.4vw; 
+        margin-left: 5px;
+    }
+}
+
+@media only screen and (min-width:2400px){
+
+    .leonardo{
+            border-radius: 100%;
+            animation: leonardo 2s infinite alternate;
+            pointer-events: none;
+            width: 13%;
+            height: 13%;
+            display: block;
+            margin: 0 auto;
+            margin-top: 2vw;
+            margin-bottom: 1.5vw;
+        }
+    
+        @keyframes leonardo {
+            0%{
+                box-shadow:0px 0px 1vw 0.3vw white;
+            }
+            100%{
+                box-shadow: 0px 0px 2vw 0.7vw white;
+            }
+        }
+    
+    
+        .texto h1 {
+        margin: 0%;
+        font-weight: 700;
+        font-size: 3vw;
+        margin-bottom:1px;
+        
+       }
+       .verificado{
+        width: 1.7vw; 
+        margin: 0.2% 0px 0px 5px;
+       }
+    
+       .sub{
+        margin: 0%;
+        font-size: 2.3vw;
+      }
+    
+      .seção{
+        margin-top: 1cm;
+      }
+    
+    
+    .itens {
+        padding: 0.5vw;
+        font-size: 3vw;
+        font-weight: 700;
+        margin-left: 9px;
+        margin: 0.3cm 0.5cm;
+        border-radius: 6vw;
+        width: 80%;
+    }
+    
+    .itens p{
+        padding: 3px;
+    }
+    
+    .img{
+        width: 3.4vw; 
+        height: 3.4vw; 
+        margin-left: 1.6vw;
+    }
+}

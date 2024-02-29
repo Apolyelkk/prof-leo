@@ -1,0 +1,680 @@
+ body {
+        background-image: url(../Imagens/BG\ celular.jpg);
+        background-color: rgba(0, 0, 0, 0.897);
+        background-repeat: no-repeat;
+        background-size: 150%;
+        background-position-y: 0%;
+        background-blend-mode: overlay;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+
+    .leonardo {
+        border-radius: 100%;
+        animation: leonardo 2s infinite alternate;
+        pointer-events: none;
+        display: block;
+        margin: 0 auto;
+    }
+
+    @keyframes leonardo {
+        0% {
+            box-shadow: 0px 0px 12vw 1vw white;
+        }
+
+        100% {
+            box-shadow: 0px 0px 5vw 1vw white;
+        }
+    }
+
+    .texto {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        margin: 10px;
+        pointer-events: none;
+
+    }
+
+    .texto h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(0, 125, 241);
+        margin: 0%;
+
+    }
+
+    .sub {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        color: rgb(255, 255, 255);
+        margin: 0%;
+        font-size: 14px;
+        text-wrap: nowrap;
+    }
+
+    .seção {
+        margin-top: 35px;
+    }
+
+
+    .itens {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        color: black;
+        text-decoration: none;
+        font-family: poppins, sans-serif;
+        background: #fff;
+        width: 100%;
+    }
+
+    .itens p {
+        padding: 3px;
+
+    }
+
+
+
+
+/* Celulares tela pequena 1 */
+@media screen and (max-width: 1650px) {
+    .leonardo {
+        width: 42%;
+        height: 42%;
+        margin-top: 2cm;
+        margin-bottom: 15px;
+    }
+    .texto h1 {
+        font-weight: 600;
+        font-size: 9vw;
+        margin-bottom: 1px;
+
+    }
+
+    .verificado {
+        width: 5vw;
+        margin: 1% 0px 0px 5px;
+    }
+    .sub {
+        font-size: 6vw;
+        margin-bottom: 1.7cm;
+    }
+    .itens {
+        font-size: 7vw;
+        font-weight: 700;
+        margin: 1cm 1.5cm;
+        padding: 0.6cm;
+        border-radius: 8vw;
+    }
+    .img {
+            width: 1.3em;
+            height: 1.3em;
+            margin-left: 5px;
+        }
+}
+/* Celulares tela pequena 2 */
+@media screen and (max-width: 1600px) {
+    .leonardo {
+        width: 42%;
+        height: 42%;
+        margin-top: 2cm;
+        margin-bottom: 15px;
+    }
+    .texto h1 {
+        font-weight: 600;
+        font-size: 9vw;
+        margin-bottom: 1px;
+
+    }
+
+    .verificado {
+        width: 5vw;
+        margin: 1% 0px 0px 5px;
+    }
+    .sub {
+        font-size: 6vw;
+        margin-bottom: 1.7cm;
+    }
+    .itens {
+        font-size: 7vw;
+        font-weight: 700;
+        margin: 1cm 1.5cm;
+        padding: 0.6cm;
+        border-radius: 8vw;
+    }
+    .img {
+            width: 1.3em;
+            height: 1.3em;
+            margin-left: 5px;
+        }
+}
+/* Celulares tela pequena 3 */
+@media screen and (max-width: 1300px) {
+    .leonardo {
+        width: 42%;
+        height: 42%;
+        margin-top: 2cm;
+        margin-bottom: 15px;
+    }
+    .texto h1 {
+        font-weight: 600;
+        font-size: 9vw;
+        margin-bottom: 1px;
+
+    }
+
+    .verificado {
+        width: 5vw;
+        margin: 1% 0px 0px 5px;
+    }
+    .sub {
+        font-size: 6vw;
+    }
+    .itens {
+        font-size: 7vw;
+        font-weight: 700;
+        margin: 1cm 1cm 0.5cm 1cm;
+        padding: 0.6cm;
+        border-radius: 8vw;
+    }
+    .img {
+            width: 1.3em;
+            height: 1.3em;
+            margin-left: 5px;
+        }
+}
+/* Celulares tela pequena 4 */
+@media screen and (max-width: 1200px) {
+    .leonardo {
+        width: 42%;
+        height: 42%;
+        margin-top: 2cm;
+        margin-bottom: 15px;
+    }
+    .texto h1 {
+        font-weight: 600;
+        font-size: 9vw;
+        margin-bottom: 1px;
+
+    }
+
+    .verificado {
+        width: 47px;
+        margin: 1% 0px 0px 5px;
+    }
+    .sub {
+        font-size: 6vw;
+    }
+    .itens {
+        font-size: 7vw;
+        font-weight: 700;
+        margin: 0.5cm 1cm;
+        padding: 23px;
+        border-radius: 8vw;
+    }
+    .img {
+            width: 1em;
+            height: 1em;
+            margin-left: 5px;
+        }
+}
+/* Celulares tela médio 1*/
+@media screen and (max-width: 1100px) {
+    .leonardo {
+        width: 42%;
+        height: 42%;
+        margin-top: 45px;
+        margin-bottom: 15px;
+    }
+    .texto h1 {
+        font-weight: 600;
+        font-size: 9vw;
+        margin-bottom: 1px;
+
+    }
+
+    .verificado {
+        width: 47px;
+        margin: 1% 0px 0px 5px;
+    }
+    .sub {
+        font-size: 6vw;
+    }
+    .itens {
+        font-size: 7vw;
+        font-weight: 700;
+        margin: 15px 25px;
+        padding: 23px;
+        border-radius: 8vw;
+    }
+    .img {
+            width: 1em;
+            height: 1em;
+            margin-left: 5px;
+        }
+}
+/* Celulares tela médio 2*/
+@media screen and (max-width: 1024px) {
+    .leonardo {
+        width: 42%;
+        height: 42%;
+        margin-top: 45px;
+        margin-bottom: 15px;
+    }
+    .texto h1 {
+        font-weight: 600;
+        font-size: 9vw;
+        margin-bottom: 1px;
+
+    }
+
+    .verificado {
+        width: 47px;
+        margin: 1% 0px 0px 5px;
+    }
+    .sub {
+        font-size: 6vw;
+    }
+    .itens {
+        font-size: 62px;
+        font-weight: 700;
+        margin: 15px 25px;
+        padding: 23px;
+        border-radius: 18px;
+    }
+    .img {
+            width: 5rem;
+            height: 5rem;
+            margin-left: 5px;
+        }
+}
+/* Celulares tela médio 3*/
+@media screen and (max-width: 1000px) {
+    .leonardo {
+        width: 42%;
+        height: 42%;
+        margin-top: 45px;
+        margin-bottom: 15px;
+    }
+    .texto h1 {
+        font-weight: 600;
+        font-size: 67px;
+        margin-bottom: 1px;
+
+    }
+
+    .verificado {
+        width: 47px;
+        margin: 1% 0px 0px 5px;
+    }
+    .sub {
+        font-size: 48px;
+    }
+    .itens {
+        font-size: 62px;
+        font-weight: 700;
+        margin: 15px 25px;
+        padding: 23px;
+        border-radius: 18px;
+    }
+    .img {
+            width: 5rem;
+            height: 5rem;
+            margin-left: 5px;
+        }
+}
+/* Celulares tela médio 4*/
+@media screen and (max-width: 900px) {
+    .leonardo {
+        width: 42%;
+        height: 42%;
+        margin-top: 45px;
+        margin-bottom: 15px;
+    }
+    .texto h1 {
+        font-weight: 600;
+        font-size: 57px;
+        margin-bottom: 1px;
+
+    }
+
+    .verificado {
+        width: 37px;
+        margin: 1% 0px 0px 5px;
+    }
+    .sub {
+        font-size: 41px;
+    }
+    .itens {
+        font-size: 47px;
+        font-weight: 700;
+        margin: 15px 25px;
+        padding: 16px;
+        border-radius: 18px;
+    }
+    .img {
+            width: 3.3rem;
+            height: 3.3rem;
+            margin-left: 5px;
+        }
+}
+/* Celulares tela médio 5*/
+@media screen and (max-width: 850px) {
+    .leonardo {
+        width: 42%;
+        height: 42%;
+        margin-top: 40px;
+        margin-bottom: 15px;
+    }
+    .texto h1 {
+        font-weight: 600;
+        font-size: 57px;
+        margin-bottom: 1px;
+
+    }
+
+    .verificado {
+        width: 37px;
+        margin: 1% 0px 0px 5px;
+    }
+    .sub {
+        font-size: 41px;
+    }
+    .itens {
+        font-size: 47px;
+        font-weight: 700;
+        margin: 15px 21px;
+        padding: 16px;
+        border-radius: 18px;
+    }
+    .img {
+            width: 3.3rem;
+            height: 3.3rem;
+            margin-left: 5px;
+        }
+}
+/* Celulares tela médio 6*/
+@media screen and (max-width: 800px) {
+    .leonardo {
+        width: 42%;
+        height: 42%;
+        margin-top: 40px;
+        margin-bottom: 15px;
+    }
+    .texto h1 {
+        font-weight: 600;
+        font-size: 49px;
+        margin-bottom: 1px;
+
+    }
+
+    .verificado {
+        width: 32px;
+        margin: 1% 0px 0px 5px;
+    }
+    .sub {
+        font-size: 40px;
+    }
+    .itens {
+        font-size: 47px;
+        font-weight: 700;
+        margin: 15px 21px;
+        padding: 16px;
+        border-radius: 18px;
+    }
+    .img {
+            width: 3rem;
+            height: 3rem;
+            margin-left: 5px;
+        }
+}
+/* Celulares tela médio 7*/
+@media screen and (max-width: 750px) {
+    .leonardo {
+        width: 42%;
+        height: 42%;
+        margin-top: 40px;
+        margin-bottom: 15px;
+    }
+    .texto h1 {
+        font-weight: 600;
+        font-size: 49px;
+        margin-bottom: 1px;
+
+    }
+
+    .verificado {
+        width: 32px;
+        margin: 1% 0px 0px 5px;
+    }
+    .sub {
+        font-size: 40px;
+    }
+    .itens {
+        font-size: 42px;
+        font-weight: 700;
+        margin: 10px 15px;
+        padding: 16px;
+        border-radius: 18px;
+    }
+    .img {
+            width: 3rem;
+            height: 3rem;
+            margin-left: 5px;
+        }
+}
+/* Celulares tela grande 1*/
+@media screen and (max-width: 700px) {
+    .leonardo {
+        width: 42%;
+        height: 42%;
+        margin-top: 40px;
+        margin-bottom: 15px;
+    }
+    .texto h1 {
+        font-weight: 600;
+        font-size: 47px;
+        margin-bottom: 1px;
+
+    }
+
+    .verificado {
+        width: 32px;
+        margin: 1% 0px 0px 5px;
+    }
+    .sub {
+        font-size: 39px;
+    }
+    .itens {
+        font-size: 39px;
+        font-weight: 700;
+        margin: 10px 9px;
+        padding: 16px;
+        border-radius: 18px;
+    }
+    .img {
+            width: 3rem;
+            height: 3rem;
+            margin-left: 5px;
+        }
+}
+/* Celulares tela grande 2*/
+@media screen and (max-width: 600px) {
+    .leonardo {
+        width: 42%;
+        height: 42%;
+        margin-top: 35px;
+        margin-bottom: 15px;
+    }
+    .texto h1 {
+        font-weight: 600;
+        font-size: 42px;
+        margin-bottom: 1px;
+
+    }
+
+    .verificado {
+        width: 27px;
+        margin: 1% 0px 0px 5px;
+    }
+    .sub {
+        font-size: 32px;
+    }
+    .itens {
+        font-size: 32px;
+        font-weight: 700;
+        margin: 10px 9px;
+        padding: 16px;
+        border-radius: 18px;
+    }
+    .img {
+            width: 2.6rem;
+            height: 2.6rem;
+            margin-left: 5px;
+        }
+}
+/* Celulares tela grande 3*/
+@media screen and (max-width: 550px) {
+    .leonardo {
+        width: 42%;
+        height: 42%;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+    .texto h1 {
+        font-weight: 600;
+        font-size: 39px;
+        margin-bottom: 1px;
+
+    }
+
+    .verificado {
+        width: 17px;
+        margin: 1% 0px 0px 5px;
+    }
+    .sub {
+        font-size: 27px;
+    }
+    .itens {
+        font-size: 25px;
+        font-weight: 700;
+        margin: 10px 8px;
+        padding: 12px;
+        border-radius: 18px;
+    }
+    .img {
+            width: 1.8rem;
+            height: 1.8rem;
+            margin-left: 5px;
+        }
+}
+/* Celulares tela grande 4*/
+@media screen and (max-width: 450px) {
+    .leonardo {
+        width: 42%;
+        height: 42%;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+    .texto h1 {
+        font-weight: 600;
+        font-size: 36px;
+        margin-bottom: 1px;
+
+    }
+
+    .verificado {
+        width: 17px;
+        margin: 1% 0px 0px 5px;
+    }
+    .sub {
+        font-size: 21px;
+    }
+    .itens {
+        font-size: 18px;
+        font-weight: 800;
+        margin: 10px 8px;
+        padding: 12px;
+        border-radius: 18px;
+    }
+    .img {
+            width: 1.8rem;
+            height: 1.8rem;
+            margin-left: 5px;
+        }
+}
+/* Celulares tela grande 5*/
+@media screen and (max-width: 400px) {
+    .leonardo {
+        width: 42%;
+        height: 42%;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+    .texto h1 {
+        font-weight: 600;
+        font-size: 32px;
+        margin-bottom: 1px;
+
+    }
+
+    .verificado {
+        width: 17px;
+        margin: 1% 0px 0px 5px;
+    }
+    .sub {
+        font-size: 21px;
+    }
+    .itens {
+        font-size: 18px;
+        font-weight: 800;
+        margin: 10px 8px;
+        padding: 7px;
+        border-radius: 18px;
+    }
+    .img {
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-left: 5px;
+        }
+}
+/* Celulares tela grande 6*/
+@media screen and (max-width: 350px) {
+    .leonardo {
+        width: 42%;
+        height: 42%;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+    .texto h1 {
+        font-weight: 600;
+        font-size: 28px;
+        margin-bottom: 1px;
+
+    }
+
+    .verificado {
+        width: 17px;
+        margin: 1% 0px 0px 5px;
+    }
+    .sub {
+        font-size: 17px;
+    }
+    .itens {
+        font-size: 18px;
+        font-weight: 800;
+        margin: 10px 8px;
+        padding: 5px;
+        border-radius: 18px;
+    }
+    .img {
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-left: 5px;
+        }
+}

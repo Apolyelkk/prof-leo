@@ -1,0 +1,103 @@
+@media screen and (min-width: 501px) and (max-width: 1024px),
+    print{
+    
+        body{
+            background-image: url(../Imagens/bg4.png);
+            background-color: rgba(0, 0, 0, 0.874); /* Exemplo: 50% de opacidade (0.5) */
+            background-blend-mode: overlay; /* Isso pode ser usado para ajustar o modo de mesclagem, experimente conforme necessário */
+            background-repeat: no-repeat;
+            background-position: center 0px;
+            background-size: 270%;
+        }
+
+    .leonardo{
+            border-radius: 100%;
+            animation: leonardo 2s infinite alternate;
+            pointer-events: none;
+            width: 30%;
+            height: 30%;
+            display: block;
+            margin: 0 auto;
+            margin-top: 26px;
+            margin-bottom: 9px;
+        }
+    
+        @keyframes leonardo {
+            0%{
+                box-shadow:0px 0px 19px 9px white;
+            }
+            100%{
+                box-shadow: 0px 0px 13px 2px white;
+            }
+        }
+    
+        .texto{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        margin: 10px;
+        font-size: 100px;
+        pointer-events: none;
+       }
+    
+        .texto h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(0, 125, 241);
+        margin: 0%;
+        font-weight: 600;
+        font-size: 40px;
+        margin-bottom:1px;
+        
+       }
+       .verificado{
+        width: 20px; 
+        margin: 0.5% 0px 0px 5px;
+       }
+    
+       .sub{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        color: rgb(255, 255, 255);
+        margin: 0%;
+        font-size: 14px; 
+        text-wrap: nowrap;
+      }
+    
+      .seção{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 35px;
+      }
+
+
+    .itens {
+        display: flex;
+        padding: 10px;
+        flex-direction: row;
+        align-items: center;
+        color: black;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 700;
+        font-family: poppins, sans-serif;
+        margin-left: 9px;
+        background: rgb(255, 255, 255);
+        margin: 10px 8px;
+        border-radius: 16px;
+        width: 80%;
+
+    }
+    .itens p{
+        padding: 3px;
+    }
+    .img{
+        width: 30px; 
+        height: 30px; 
+        margin-left: 5px;
+    }
+}

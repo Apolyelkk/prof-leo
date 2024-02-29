@@ -1,0 +1,448 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar-button {
+    display: none
+  }
+
+  :root{
+    --carregando: 20px;
+    --tamanho-do-atomo: 280px;
+    --esferas-do-atomo: 280px;
+    --ajuste-superior: 150px;
+    --cor_de_fundo: rgb(0, 0, 0);
+    --atom-color-hex: #00d8ff;
+    --atom-color-rgb: 0, 216, 255;
+    --nucleus-size: calc(var(--tamanho-do-atomo) / 5);
+    --electron-color-hex: #99f8ff;
+    --electron-size: calc(var(--tamanho-do-atomo) / 25);
+    --electron-orbit-size: calc(var(--tamanho-do-atomo) / 2.5);
+    --electron-speed: 1.2s;
+    --electron-speed-alpha: 1s;
+    --electron-speed-omega: .8s;
+  }
+
+.background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--cor_de_fundo);
+    z-index: 1;
+}
+
+#texto-carregando{
+    position: relative;
+    color: rgb(255, 255, 255);
+    font-family: poppins, 'Arial';
+    font-size: var(--carregando);
+    z-index: 2;
+    top: var(--ajuste-superior);
+    
+}
+
+#texto-feito {
+    color: white;
+    font-family: poppins, 'Arial';
+    font-size: var(--carregando);
+    z-index: 2;
+    text-wrap: nowrap;
+    position: relative;
+    top: var(--ajuste-superior);
+}
+
+
+.pai-bola{
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+.atomo{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: var(--esferas-do-atomo);
+    position: absolute;
+    z-index: 2;
+    animation: 8s atom infinite cubic-bezier(1, .25, 0, .75);
+    
+}
+
+@keyframes atom {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    12.5% {
+        transform: rotate(-45deg) scale(.9);
+    }
+
+    25% {
+        transform: rotate(-90deg) scale(1);
+    }
+
+    37.5% {
+        transform: rotate(-135deg) scale(.9);
+    }
+
+    50% {
+        transform: rotate(-180deg) scale(1);
+    }
+
+    62.5% {
+        transform: rotate(-225deg) scale(.9);
+    }
+
+    75% {
+        transform: rotate(-270deg) scale(1);
+    }
+
+    87.5% {
+        transform: rotate(-315deg) scale(.9);
+    }
+
+    100% {
+        transform: rotate(-360deg) scale(1);
+    }
+}
+
+/* Nucleus */
+.atomo::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: var(--nucleus-size);
+    height: var(--nucleus-size);
+    margin-top: calc(var(--nucleus-size) / -2);
+    margin-left: calc(var(--nucleus-size) / -2);
+    background: var(--electron-color-hex);
+    /* var(--atom-color-hex); */
+    border-radius: 100%;
+    box-shadow: 0 0 3px 0 var(--atom-color-hex);
+    animation: 2s nucleus infinite cubic-bezier(.65, 0, .35, 1);
+}
+
+@keyframes nucleus {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(.9);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    75% {
+        transform: scale(.85);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Electron Orbit */
+.atomo>[class^="electron"] {
+    border-top: solid rgba(var(--atom-color-rgb), .5) 1px;
+    border-right: solid rgba(var(--atom-color-rgb), .35) 2px;
+    border-bottom: solid rgba(var(--atom-color-rgb), .2) 4px;
+    border-left: solid rgba(var(--atom-color-rgb), 0) 2px;
+    border-radius: 100%;
+    width: 100%;
+    height: var(--electron-orbit-size);
+    position: absolute;
+    top: 50%;
+    margin-top: calc(var(--electron-orbit-size) / -2);
+    animation: var(--electron-speed) electron-orbit infinite linear;
+}
+
+.atomo>.electron-alpha {
+    transform: rotate(60deg);
+    animation: var(--electron-speed-alpha) electron-orbit infinite linear;
+}
+
+.atomo>.electron-omega {
+    transform: rotate(-60deg);
+    animation: var(--electron-speed-omega) electron-orbit infinite linear;
+}
+
+@keyframes electron-orbit {
+    0% {
+        border-top: solid rgba(var(--atom-color-rgb), .5) 1px;
+        border-right: solid rgba(var(--atom-color-rgb), .35) 2px;
+        border-bottom: solid rgba(var(--atom-color-rgb), .2) 4px;
+        border-left: solid rgba(var(--atom-color-rgb), 0) 2px;
+    }
+
+    25% {
+        border-top: solid rgba(var(--atom-color-rgb), .35) 1px;
+        border-right: solid rgba(var(--atom-color-rgb), .2) 2px;
+        border-bottom: solid rgba(var(--atom-color-rgb), 0) 4px;
+        border-left: solid rgba(var(--atom-color-rgb), .5) 2px;
+    }
+
+    50% {
+        border-top: solid rgba(var(--atom-color-rgb), .2) 1px;
+        border-right: solid rgba(var(--atom-color-rgb), 0) 2px;
+        border-bottom: solid rgba(var(--atom-color-rgb), .5) 4px;
+        border-left: solid rgba(var(--atom-color-rgb), .35) 2px;
+    }
+
+    75% {
+        border-top: solid rgba(var(--atom-color-rgb), 0) 1px;
+        border-right: solid rgba(var(--atom-color-rgb), .5) 2px;
+        border-bottom: solid rgba(var(--atom-color-rgb), .35) 4px;
+        border-left: solid rgba(var(--atom-color-rgb), .2) 2px;
+    }
+
+    100% {
+        border-top: solid rgba(var(--atom-color-rgb), .5) 1px;
+        border-right: solid rgba(var(--atom-color-rgb), .35) 2px;
+        border-bottom: solid rgba(var(--atom-color-rgb), .2) 4px;
+        border-left: solid rgba(var(--atom-color-rgb), 0) 2px;
+    }
+}
+
+/* Electron Unit */
+.atomo [class^="electron"]::after {
+    content: '';
+    display: block;
+    width: var(--electron-size);
+    height: var(--electron-size);
+    background: var(--electron-color-hex);
+    border-radius: 50%;
+    margin-top: calc(var(--electron-size) / -2);
+    position: absolute;
+    top: 50%;
+    left: calc(var(--electron-size) / -1);
+    transform: scale(1);
+    animation: calc(var(--electron-speed) * 2) electron infinite ease-in-out;
+}
+
+.atomo .electron-alpha::after {
+    animation: calc(var(--electron-speed-alpha) * 2) electron infinite ease-in-out;
+}
+
+.atomo .electron-omega::after {
+    animation: calc(var(--electron-speed-omega) * 2) electron infinite ease-in-out;
+}
+
+@keyframes electron {
+    0% {
+        left: calc(var(--electron-size) / -1);
+        transform: scale(1);
+    }
+
+    12.5% {
+        top: 100%;
+        transform: scale(1.5);
+    }
+
+    25% {
+        left: 100%;
+        transform: scale(1);
+    }
+
+    37.5% {
+        top: 0%;
+        transform: scale(.25);
+    }
+
+    50% {
+        left: calc(var(--electron-size) / -1);
+        transform: scale(1);
+    }
+
+    62.5% {
+        top: 100%;
+        transform: scale(1.5);
+    }
+
+    75% {
+        left: 100%;
+        transform: scale(1);
+    }
+
+    87.5% {
+        top: 0%;
+        transform: scale(.25);
+    }
+
+    100% {
+        left: calc(var(--electron-size) / -1);
+        transform: scale(1);
+    }
+}
+
+
+/* Para dispositivos moveis */
+
+/* Celulares tela pequena 1 */
+@media screen and (orientation: portrait) and (max-width: 1650px) {
+    :root{
+        --carregando: 5em;
+        --tamanho-do-atomo: 60em;
+        --esferas-do-atomo: 65em;
+        --ajuste-superior: 18.5cm;
+    }
+}
+/* Celulares tela pequena 2 */
+@media screen and (orientation: portrait) and (max-width: 1600px) {
+    :root{
+        --carregando: 5em;
+        --tamanho-do-atomo: 55em;
+        --esferas-do-atomo: 60em;
+        --ajuste-superior: 15.5cm;
+    }
+}
+/* Celulares tela pequena 3 */
+@media screen and (orientation: portrait) and (max-width: 1300px) {
+    :root{
+        --carregando: 3em;
+        --tamanho-do-atomo: 50em;
+        --esferas-do-atomo: 55em;
+        --ajuste-superior: 13.5cm;
+    }
+}
+/* Celulares tela pequena 4 */
+@media screen and (orientation: portrait) and (max-width: 1200px) {
+    :root{
+        --carregando: 3em;
+        --tamanho-do-atomo: 45em;
+        --esferas-do-atomo: 50em;
+        --ajuste-superior: 13.5cm;
+    }
+}
+/* Celulares tela médio 1*/
+@media screen and (orientation: portrait) and (max-width: 1100px) {
+    :root{
+        --carregando: 3em;
+        --tamanho-do-atomo: 40em;
+        --esferas-do-atomo: 45em;
+        --ajuste-superior: 10.5cm;
+    }
+}
+/* Celulares tela médio 2*/
+@media screen and (orientation: portrait) and (max-width: 1024px) {
+    :root{
+        --carregando: 3em;
+        --tamanho-do-atomo: 35em;
+        --esferas-do-atomo: 40em;
+        --ajuste-superior: 8.5cm;
+    }
+}
+/* Celulares tela médio 3*/
+@media screen and (orientation: portrait) and (max-width: 1000px) {
+    :root{
+        --carregando: 2.8em;
+        --tamanho-do-atomo: 35em;
+        --esferas-do-atomo: 40em;
+        --ajuste-superior: 7.9cm;
+    }
+}
+/* Celulares tela médio 4*/
+@media screen and (orientation: portrait) and (max-width: 900px) {
+    :root{
+        --carregando: 2.5em;
+        --tamanho-do-atomo: 30em;
+        --esferas-do-atomo: 35em;
+        --ajuste-superior: 7.4cm;
+    }
+}
+/* Celulares tela médio 5*/
+@media screen and (orientation: portrait) and (max-width: 850px) {
+    :root{
+        --carregando: 2.1em;
+        --tamanho-do-atomo: 25em;
+        --esferas-do-atomo: 30em;
+        --ajuste-superior: 6.7cm;
+    }
+}
+/* Celulares tela médio 6*/
+@media screen and (orientation: portrait) and (max-width: 800px) {
+    :root{
+        --carregando: 2.1em;
+        --tamanho-do-atomo: 20em;
+        --esferas-do-atomo: 25em;
+        --ajuste-superior: 6.2cm;
+    }
+}
+/* Celulares tela médio 7*/
+@media screen and (orientation: portrait) and (max-width: 750px) {
+    :root{
+        --carregando: 2em;
+        --tamanho-do-atomo: 20em;
+        --esferas-do-atomo: 25em;
+        --ajuste-superior: 6.1cm;
+    }
+}
+/* Celulares tela grande 1*/
+@media screen and (orientation: portrait) and (max-width: 700px) {
+    :root{
+        --carregando: 2em;
+        --tamanho-do-atomo: 20em;
+        --esferas-do-atomo: 25em;
+        --ajuste-superior: 6cm;
+    }
+}
+/* Celulares tela grande 2*/
+@media screen and (orientation: portrait) and (max-width: 600px) {
+    :root{
+        --carregando: 2em;
+        --tamanho-do-atomo: 20em;
+        --esferas-do-atomo: 20em;
+        --ajuste-superior: 5cm;
+    }
+}
+/* Celulares tela grande 3*/
+@media screen and (orientation: portrait) and (max-width: 550px) {
+    :root{
+        --carregando: 20px;
+        --tamanho-do-atomo: 20em;
+        --esferas-do-atomo: 20em;
+        --ajuste-superior: 5cm;
+    }
+}
+/* Celulares tela grande 4*/
+@media screen and (orientation: portrait) and (max-width: 450px) {
+    :root{
+        --carregando: 20px;
+        --tamanho-do-atomo: 40vh;
+        --esferas-do-atomo: 50vh;
+        --ajuste-superior: 4cm;
+    }
+}
+/* Celulares tela grande 5*/
+@media screen and (orientation: portrait) and (max-width: 400px) {
+    :root{
+        --carregando: 20px;
+        --tamanho-do-atomo: 280px;
+        --esferas-do-atomo: 280px;
+        --ajuste-superior: 4cm;
+    }
+}
+
+/* Celulares tela grande 6*/
+@media screen and (orientation: portrait) and (max-width: 350px) {
+    :root{
+        --carregando: 20px;
+        --tamanho-do-atomo: 280px;
+        --esferas-do-atomo: 280px;
+        --ajuste-superior: 150px;
+    }
+}

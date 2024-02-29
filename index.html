@@ -1,0 +1,109 @@
+
+<!doctype html>
+<html lang="pt-br" dir="ltr">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="author" content="snapoyel" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="next-size-adjust" />
+
+    <!-- como irar aparecer ao ser compartilhado em redes sociais-->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="prof-leo">
+    <meta property="og:title" content="Prof-leonardo">
+    <meta name="description" content="Meus links para minhas outras redes sociais." />
+    <meta property="og:image" content="https://instagram.fcau10-1.fna.fbcdn.net/v/t51.2885-19/270322627_1325970524514511_7170312522852933015_n.jpg?stp=dst-jpg_s320x320&_nc_ht=instagram.fcau10-1.fna.fbcdn.net&_nc_cat=107&_nc_ohc=5_5Yu-44gk4AX8_YP_F&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AfAZiidlDx7MdXELwlTR6TaIg9tgMpKUvShphvkHfsBC2w&oe=65C06E27&_nc_sid=8b3546" />
+    <!-- final de como irar aparecer ao ser compartilhado em redes sociais-->
+    
+    
+    <link rel="stylesheet" href="./Estilo/reset.css">
+    <link rel="stylesheet" media="screen and (orientation: landscape)" href="./Estilo/PC.css">
+    <link rel="stylesheet" media="screen and (orientation: portrait)" href="./Estilo/Celular.css">
+    <link rel="stylesheet" href="./Estilo/Tablet.cs">
+    <link rel="shortcut icon" href="./Imagens/titio.jpg"  type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Estilo/botões.css">
+    <link rel="stylesheet" href="./Estilo/carregador.css">
+    <title>Prof - Leonardo</title>
+</head>
+
+<body>
+
+  <div class="background" id="background" style="touch-action: none;"></div>  
+  <div class="pai-bola" style="overflow: hidden;">
+  <div class="atomo" id="atomo">
+    <div class="electron"></div>
+    <div class="electron-alpha"></div>
+    <div class="electron-omega"></div>
+
+  </div>
+  <span id="texto-carregando"></span>
+  <p id="texto-feito" style="display: none;">Clique na tela!</p>
+</div>
+
+  <div class="conteudo">
+    <img class="leonardo" draggable="false" src="./Imagens/titio.jpg">
+    <div class="texto">
+      
+        <h1>@leoufpe.br</h1><img class="verificado" src="./Imagens/verificado.svg">
+    </div>
+    <p class="sub">Qualquer dúvida entre em contato.</p>
+    
+    <section class="seção" style="overflow: hidden;">
+            <div class="anime" style="width: 100%; display: flex; justify-content: center;">
+            <a class="itens" href="https://www.instagram.com/leoufpe.br"> 
+            <img class="img" src="./Imagens/Instagram.png">
+            <p>Instagram</p>
+             </a></div>
+
+             <div class="anime" style="width: 100%; display: flex; justify-content: center;">
+            <a class="itens" href="https://www.facebook.com">
+            <img class="img" src="./Imagens/Facebook.webp">  
+            <p>Facebook</p>
+          </a></div>
+          
+          <div class="anime" style="width: 100%; display: flex; justify-content: center;">
+            <a class="itens" href="https://www.whatsapp.com">
+            <img class="img" src="./Imagens/zap.png">
+            <p>Whatsapp</p>
+          </a></div>
+          
+        </section>
+        
+        <audio id="meuAudio" controls style="display: none;">
+          <source src="./Imagens/Estelar.mp3" type="audio/mp3">  
+      </audio>
+    
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          // Obtém o elemento de áudio
+          var meuAudio = document.getElementById('meuAudio');
+    
+          // Define o volume (opcional)
+          meuAudio.volume = 0.09;
+    
+          // Mostra o elemento de áudio
+          meuAudio.style.display = 'none';
+    
+          // Adiciona um ouvinte de evento para o clique em qualquer lugar na página
+
+        });
+    
+        // Adiciona um ouvinte de evento para reiniciar a música quando ela é pausada
+        document.getElementById('meuAudio').addEventListener('pause', function() {
+          var meuAudio = document.getElementById('meuAudio');
+          meuAudio.currentTime = 0; // Define o tempo de reprodução para o início
+          meuAudio.play(); // Inicia a reprodução
+        });
+      </script>
+      <script src="./Funções/loader.js"></script>
+    </div>
+</body>
+
+</html>
